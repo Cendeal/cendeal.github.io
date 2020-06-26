@@ -57,6 +57,7 @@ ul {
     background-size: cover;
     color: white;
     line-height: 2;
+    position: relative;
 }
 
 #home .hi {
@@ -304,7 +305,15 @@ ul {
     margin-left: -1.3rem;
     background: #F0F0F0;
 }
+/*experience*/
+#experience{
+    background: white;
+}
 
+/**/
+#project{
+    background: #F0F0F0;
+}
 @media screen and (max-width: 600px) {
     .top .nav-menu-btn-div {
         display: flex;
