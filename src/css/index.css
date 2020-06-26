@@ -218,6 +218,7 @@ ul {
     text-shadow: 0 1px 3px rgba(110, 119, 123, 0.66);
 }
 
+
 #skill .skill-item {
     display: flex;
     flex-wrap: wrap;
@@ -258,6 +259,12 @@ ul {
     background: #fceec9;
     padding: 3rem;
     color: black;
+}
+
+#prize .wrapper{
+    border-radius: 0.25rem;
+    border: 1px dotted red;
+    padding: 2rem;
 }
 
 #prize li {
