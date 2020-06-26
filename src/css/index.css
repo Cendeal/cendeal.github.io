@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background: #F0F0F0;
 }
 
 * {
@@ -131,6 +132,10 @@ ul {
     animation: move 8s linear infinite;
 }
 
+.part{
+    margin: 1.2rem;
+    border-radius: 0.25rem;
+}
 @keyframes current {
     0% {
         margin-left: 0;
@@ -202,6 +207,7 @@ ul {
 #skill {
     background: #7682a9;
     padding: 1rem;
+    color: white;
 }
 
 .part-title {
@@ -209,8 +215,6 @@ ul {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: #3F51B5;
-    mix-blend-mode: difference;
     text-shadow: 0 1px 3px rgba(110, 119, 123, 0.66);
 }
 
@@ -251,8 +255,9 @@ ul {
 
 /*prize*/
 #prize {
-    background: #F0F0F0;
+    background: #fceec9;
     padding: 3rem;
+    color: black;
 }
 
 #prize li {
@@ -307,12 +312,21 @@ ul {
 }
 /*experience*/
 #experience{
-    background: white;
+    background: #1c2c48;
+    color: #F8FAFF;
 }
 
 /**/
 #project{
-    background: #F0F0F0;
+    background: #f04d50;
+    color: white;
+
+}
+/*contact*/
+#contact{
+    margin: 1rem;
+    background: #4dc1b9;
+    color: white;
 }
 @media screen and (max-width: 600px) {
     .top .nav-menu-btn-div {
