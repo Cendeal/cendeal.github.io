@@ -184,23 +184,44 @@ ul {
     background: #7682a9;
 }
 
+#skill .skill-title{
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
 #skill .skill-item{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-#skill .skill-item div{
-    width: 20vw;
-    height: 20vw;
+#skill .skill-item > div{
+    width: 15vw;
+    height: 15vw;
     margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: all 0.3s ease-in-out 0s;
     border-radius: 0.2rem;
     background: white;
     cursor: pointer;
+    text-transform: uppercase;
+    color: #666;
 }
-#skill .skill-item div:hover{
+
+#skill .skill-item  p{
+    font-size: 0.8rem;
+}
+
+#skill .skill-item img{
+    padding: 1rem;
+}
+#skill .skill-item > div:hover{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     transform: translateY(-0.5rem);
 }
