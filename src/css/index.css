@@ -257,14 +257,15 @@ ul {
 /*prize*/
 #prize {
     background: #fceec9;
-    padding: 2rem;
+    padding: 1.25rem;
     color: black;
 }
 
 #prize .wrapper{
     border-radius: 0.25rem;
     border: 1px dotted red;
-    padding: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 #prize li {
