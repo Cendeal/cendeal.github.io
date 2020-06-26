@@ -19,8 +19,12 @@ function showMenu() {
 }
 
 function resizeListen() {
+    let temp_width = 0
     window.onresize = function () {
-      window.location.reload()
+        if (temp_width !== document.body.getBoundingClientRect().width) {
+            window.location.reload()
+            temp_width = document.body.getBoundingClientRect().width
+        }
     };
 }
 
