@@ -2,12 +2,19 @@ function showMenu() {
     const nav = document.getElementsByClassName("nav-menu")
     if (nav.length > 0) {
         for (let navElement of nav) {
-            if (navElement.style.display === "block") {
-                navElement.style.display = ""
+            if (navElement.hidden) {
+                navElement.hidden = false
                 navElement.expend = false
+                // navElement.style.marginTop='';
+                // navElement.style.zIndex='';
+                navElement.style.transform='scaleY(0)'
+                navElement.style.position = ''
             } else {
-                navElement.style.display = "block"
+                navElement.hidden = true
                 navElement.expend = true
+                navElement.style.transform='scaleY(1)'
+                navElement.style.position = 'static'
+
             }
         }
     }

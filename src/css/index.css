@@ -1,6 +1,9 @@
 body {
     margin: 0;
 }
+* {
+    box-sizing: border-box;
+}
 
 ul {
     margin: 0;
@@ -8,12 +11,12 @@ ul {
     margin-inline: 0;
     padding-inline: 0;
     margin-block: 0;
+    list-style: outside none none;
 }
 
 .top {
     box-sizing: border-box;
     width: 100%;
-    padding: 1rem;
     background: rgb(56, 57, 125);
     color: white;
     box-shadow: 1px 3px 6px rgba(128, 128, 128, 0.5);
@@ -21,10 +24,11 @@ ul {
 }
 
 .top .nav-menu {
-    list-style: outside none none;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    transition: all 0.3s ease 0s;
 }
 
 .top .nav-menu-btn-div {
@@ -38,7 +42,7 @@ ul {
 }
 
 .top .item {
-    margin: 0 1rem;
+    padding: 1rem;
 }
 
 
@@ -76,6 +80,7 @@ ul {
 }
 .contact img{
     height: 2rem;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .contact img:hover{
@@ -182,14 +187,17 @@ ul {
 /*skill*/
 #skill{
     background: #7682a9;
+    padding: 1rem;
 }
 
-#skill .skill-title{
+.part-title{
     padding: 1rem;
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: #3F51B5;
+    mix-blend-mode: difference;
+    text-shadow: 0 3px 6px rgba(110, 119, 123, 0.66);
 }
 
 #skill .skill-item{
@@ -198,8 +206,8 @@ ul {
     justify-content: center;
 }
 #skill .skill-item > div{
-    width: 15vw;
-    height: 15vw;
+    width: 12rem;
+    height: 12rem;
     margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -209,7 +217,6 @@ ul {
     transition: all 0.3s ease-in-out 0s;
     border-radius: 0.2rem;
     background: white;
-    cursor: pointer;
     text-transform: uppercase;
     color: #666;
 }
@@ -221,28 +228,87 @@ ul {
 #skill .skill-item img{
     padding: 1rem;
 }
-#skill .skill-item > div:hover{
+#skill .skill-item > div:hover,#prize li .content:hover{
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     transform: translateY(-0.5rem);
 }
 
+/*prize*/
+#prize{
+    background: #F0F0F0;
+    padding: 3rem;
+}
+#prize li{
+    border-left: 2px solid #b19f3b;
+    margin-left: -2px;
+    padding: 1rem;
+}
+.prize-icon{
+    float: left;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    display: inline-block;
+    background: url("../img/prize.png");
+    background-size: cover;
+    margin-left: -2rem;
+}
+
+#prize h2,#prize h5{
+    color: #676767;
+    margin: 0;
+}
+#prize h2{
+    padding-left: 1rem;
+}
+#prize .content >div{
+    color: #888;
+    font-size: 0.8rem;
+    padding-top: 0.5rem ;
+}
+#prize li .content{
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#prize li:not(:nth-child(1)):before{
+    content: " ";
+    display: block;
+    border: 0.15rem #6968a2  solid;
+    border-radius: 50%;
+    height: 0.25rem;
+    width: 0.25rem;
+    margin-left: -1.3rem;
+    background: #F0F0F0;
+}
 
 @media screen and (max-width: 600px) {
     .top .nav-menu-btn-div {
         display: flex;
+        padding: 1rem;
         justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+    }
+
+    .top .item {
+        padding: 0 1rem 1rem;
     }
 
     .top .open-menu-btn {
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
     }
 
     .top .nav-menu {
-        display: none;
+        position: absolute;
+        top:-9999px;
+        transform-origin: 0 0 0;
         width: 6rem;
+        transform: scaleY(0);
         flex-direction: column;
-        /*清除浮动*/
-        clear: both;
     }
 
     /*about*/
