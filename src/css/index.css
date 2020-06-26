@@ -1,6 +1,7 @@
 body {
     margin: 0;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -57,34 +58,40 @@ ul {
     color: white;
     line-height: 2;
 }
+
 #home .hi {
     font-size: 1.5rem;
 }
-#home .name{
+
+#home .name {
     font-size: 2rem;
     font-weight: bold;
 }
 
-#home .work{
+#home .work {
     font-size: 1.2rem;
     font-style: italic;
 }
+
 .contact {
     display: flex;
     padding-top: 1rem;
 }
-.contact div{
+
+.contact div {
     padding: 0.2rem;
     cursor: pointer;
 }
-.contact img{
+
+.contact img {
     height: 2rem;
     transition: all 0.3s ease-in-out 0s;
 }
 
-.contact img:hover{
+.contact img:hover {
     transform: scale(1.2);
 }
+
 .photo {
     width: 25vw;
     height: 25vw;
@@ -100,8 +107,9 @@ ul {
     width: 25vw;
     height: auto;
 }
+
 /*wave*/
-.wave{
+.wave {
     position: absolute;
     display: flex;
     bottom: 0;
@@ -111,15 +119,17 @@ ul {
     animation: current 2s linear infinite;
     overflow: hidden;
 }
-.wave-line{
+
+.wave-line {
     display: inline-block;
     width: 25vw;
     height: 25vw;
-    background: rgba(255,255,255,.8);
+    background: rgba(255, 255, 255, .8);
     border-radius: 50% 80% 40% 80%;
     z-index: 1;
     animation: move 8s linear infinite;
 }
+
 @keyframes current {
     0% {
         margin-left: 0;
@@ -131,20 +141,20 @@ ul {
 }
 
 @keyframes move {
-    0%{
+    0% {
         border-radius: 60% 70% 30% 70%;
         transform: rotate(10deg) translateY(2.5vh);
     }
-    50%{
-         border-radius: 50%;
-         transform: translateY(1.5vh);
-     }
+    50% {
+        border-radius: 50%;
+        transform: translateY(1.5vh);
+    }
 
-    75%{
+    75% {
         border-radius: 60% 70% 30% 70%;
         transform: rotate(20deg) translateY(3vh);
     }
-    100%{
+    100% {
         border-radius: 60% 70% 30% 70%;
         transform: rotate(10deg) translateY(2.5vh);
     }
@@ -162,16 +172,19 @@ ul {
     border-collapse: collapse;
 }
 
-#about table td{
+#about table td {
     padding: 0.8rem;
     border: 1px solid #e0e0dc;
 }
-#about table td.title{
+
+#about table td.title {
     text-align: center;
 }
-#about table tr td:first-child{
+
+#about table tr td:first-child {
     font-weight: bold;
 }
+
 #about > div {
     box-sizing: border-box;
     margin: 1rem;
@@ -183,13 +196,14 @@ ul {
     justify-content: center;
     padding: 1rem;
 }
+
 /*skill*/
-#skill{
+#skill {
     background: #7682a9;
     padding: 1rem;
 }
 
-.part-title{
+.part-title {
     padding: 1rem;
     text-align: center;
     font-size: 2rem;
@@ -199,12 +213,13 @@ ul {
     text-shadow: 0 3px 6px rgba(110, 119, 123, 0.66);
 }
 
-#skill .skill-item{
+#skill .skill-item {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-#skill .skill-item > div{
+
+#skill .skill-item > div {
     width: 12rem;
     height: 12rem;
     margin: 1rem;
@@ -220,29 +235,32 @@ ul {
     color: #666;
 }
 
-#skill .skill-item  p{
+#skill .skill-item p {
     font-size: 0.8rem;
 }
 
-#skill .skill-item img{
+#skill .skill-item img {
     padding: 1rem;
 }
-#skill .skill-item > div:hover,#prize li .content:hover{
+
+#skill .skill-item > div:hover, #prize li .content:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     transform: translateY(-0.5rem);
 }
 
 /*prize*/
-#prize{
+#prize {
     background: #F0F0F0;
     padding: 3rem;
 }
-#prize li{
+
+#prize li {
     border-left: 2px solid #b19f3b;
     margin-left: -2px;
     padding: 1rem;
 }
-.prize-icon{
+
+.prize-icon {
     float: left;
     width: 2rem;
     height: 2rem;
@@ -253,19 +271,22 @@ ul {
     margin-left: -2rem;
 }
 
-#prize h2,#prize h5{
+#prize h2, #prize h5 {
     color: #676767;
     margin: 0;
 }
-#prize h2{
+
+#prize h2 {
     padding-left: 1rem;
 }
-#prize .content >div{
+
+#prize .content > div {
     color: #888;
     font-size: 0.8rem;
-    padding-top: 0.5rem ;
+    padding-top: 0.5rem;
 }
-#prize li .content{
+
+#prize li .content {
     background: white;
     padding: 1.5rem;
     border-radius: 0.2rem;
@@ -273,10 +294,10 @@ ul {
     transition: all 0.3s ease-in-out 0s;
 }
 
-#prize li:not(:nth-child(1)):before{
+#prize li:not(:nth-child(1)):before {
     content: " ";
     display: block;
-    border: 0.15rem #6968a2  solid;
+    border: 0.15rem #6968a2 solid;
     border-radius: 50%;
     height: 0.25rem;
     width: 0.25rem;
@@ -298,12 +319,27 @@ ul {
     }
 
     .top .open-menu-btn {
-        padding: 0.5rem 1rem;
+        height: 2rem;
+        width: 2rem;
+        display: inline-block;
+        background: transparent;
+        position: relative;
+        border: 1px solid white;
+        border-radius: 0.25rem;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    .top .open-menu-btn img {
+        padding: 0.25rem;
+        width: 100%;
+        height: 100%;
     }
 
     .top .nav-menu {
         position: absolute;
-        top:-9999px;
+        top: -9999px;
         transform-origin: 0 0 0;
         width: 6rem;
         transform: scaleY(0);
